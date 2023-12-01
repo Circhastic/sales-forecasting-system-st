@@ -55,7 +55,7 @@ def main():
       disabled=st.session_state.uploaded,
     )
 
-  if (forecast_button_clicked):
+  # if (forecast_button_clicked):
     # TODO call arima here
 
     # pass
