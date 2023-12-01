@@ -11,8 +11,8 @@ def main():
       initial_sidebar_state="expanded",
   )
 
-  # if 'uploaded' not in st.session_state:
-    # st.session_state.uploaded = 'uploaded'
+  if 'uploaded' not in st.session_state:
+    st.session_state.uploaded = 'uploaded'
 
   # Sidebar Menu
   with st.sidebar:
@@ -45,17 +45,17 @@ def main():
   st.title("Sales Forecasting Dashboard")
   st.write("Welcome User, start by uploading your file on the left sidebar")
 
-  # if (st.session_state.uploaded):
-    # st.line_chart(df)
+  if (st.session_state.uploaded):
+    st.line_chart(df)
 
-    # forecast_button_clicked = st.button(
-      # 'Start Forecasting',
-      # key='forecast_button',
-      # type="primary",
-      # disabled=st.session_state.uploaded,
-    # )
+    forecast_button_clicked = st.button(
+      'Start Forecasting',
+      key='forecast_button',
+      type="primary",
+      disabled=st.session_state.uploaded,
+    )
 
-  # if (forecast_button_clicked):
+  if (forecast_button_clicked):
     # TODO call arima here
 
     # pass
